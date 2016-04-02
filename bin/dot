@@ -22,3 +22,5 @@ fi
 # Install software
 echo "› $ZSH/script/install"
 $ZSH/script/install
+
+echo "› Finished"
