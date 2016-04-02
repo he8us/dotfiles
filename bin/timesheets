@@ -1,3 +1,0 @@
-#!/bin/sh
-git log --pretty=format:"%s" --author=cedric@he8us.be --since="1 day 12 hours" | pbcopy
-echo "Git logs copied to clipboard";
