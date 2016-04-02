@@ -1,3 +1,5 @@
+source $HOME/antigen/antigen.zsh
+
 ## Antigen
 antigen use oh-my-zsh
 
