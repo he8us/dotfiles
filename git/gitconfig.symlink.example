@@ -21,7 +21,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = atom
+        editor = vim
         autocrlf = input
 [apply]
         whitespace = nowarn
@@ -38,4 +38,8 @@
         # Setting to git 2.0 default to suppress warning message
         default = simple
 [commit]
-	     template = ~/.gitmessage.txt
+        template = ~/.gitmessage.txt
+        gpgsign = true
+
+[gpg]
+        program = gpg
