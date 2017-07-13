@@ -12,3 +12,7 @@ antigen.symlink/repos
 git/gitconfig.symlink
 
 .idea
+cache
+gnupg.symlink/*
+!gnupg.symlink/gpg.conf
+!gnupg.symlink/gpg-agent.conf
