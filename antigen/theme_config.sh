@@ -33,7 +33,6 @@ icons=(
   SYMFONY_ICON                      $'\uE757'              # 
   NODE_ICON                         $'\uE617 '             # 
   MULTILINE_FIRST_PROMPT_PREFIX     ''                     #
-  MULTILINE_SECOND_PROMPT_PREFIX    $'\uf061 '             # 
   MULTILINE_NEWLINE_PROMPT_PREFIX   $'\uf178 '             # 
   MULTILINE_LAST_PROMPT_PREFIX      $'\uf061 '             # 
   APPLE_ICON                        $'\uF179'              # 
