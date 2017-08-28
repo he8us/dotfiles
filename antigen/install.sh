@@ -1,4 +1,2 @@
 #!/bin/sh
-
-cd "$(dirname "$0")/.."
-git submodule update --init --recursive
+curl -L git.io/antigen > $HOME/antigen.zsh

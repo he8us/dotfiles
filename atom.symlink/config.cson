@@ -1,7 +1,64 @@
 "*":
+  "atom-autocomplete-php":
+    gotoKey: "cmd"
+    insertNewlinesForUseStatements: true
+  "atom-material-ui":
+    tabs:
+      compactTabs: true
+    ui:
+      panelContrast: true
+  autosave:
+    enabled: true
   core:
     disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
       "language-gfm"
+      "markdown-preview"
     ]
-  "exception-reporting":
-    userId: "58fb3d49-bdad-8bd4-9a4a-eb4d49c7a0ac"
+    hideGitIgnoredFiles: true
+    ignoredNames: [
+      ".bundle"
+      ".git"
+      "log"
+      "repositories"
+      "tmp"
+      "vendor"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    fontFamily: "FuraCode Nerd Font"
+    fontSize: 13
+    invisibles: {}
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+    tabLength: 4
+  "go-plus":
+    goPath: "/Users/holman/Code/go"
+  "markdown-image-assistant":
+    prependTargetFileName: false
+  "markdown-preview-plus":
+    breakOnSingleNewline: true
+  "markdown-writer":
+    fileExtension: ".md"
+    relativeImagePath: true
+    siteImagesDir: "img/{year}/{month}/"
+  "release-notes":
+    viewedVersion: "0.89.0"
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
+    ]
+  welcome:
+    showOnStartup: false
+".md.text":
+  editor:
+    softWrap: false
+    softWrapAtPreferredLineLength: false

@@ -1,19 +1,26 @@
-source $HOME/.antigen/antigen.zsh
+source $HOME/antigen.zsh
 
 ## Antigen
 antigen use oh-my-zsh
 
 ### Bundles
-antigen bundle git
+antigen bundle common-aliases
 antigen bundle docker
+antigen bundle bower
+antigen bundle symfony2
+antigen bundle nvm
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions src
+antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 
+#bugs
+#antigen bundle git
+#antigen bundle npm
+
+
+
 ### Theme
-POWERLEVEL9K_MODE='awesome-patched'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm battery time)
+source $ZSH/antigen/theme_config.sh
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
