@@ -1,2 +1,2 @@
 #!/bin/sh
-apt-get install grc
+apt-get install vim -y
