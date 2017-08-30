@@ -1,2 +1,2 @@
 #!/bin/sh
-apt-get install vim -y
+apt-get install bc vim -y
