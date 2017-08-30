@@ -1,1 +1,1 @@
-source /etc/grc.zsh
+source /etc/profile.d/grc.bashrc
