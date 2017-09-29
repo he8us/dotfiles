@@ -37,16 +37,7 @@ set -g mouse on
 # Copy/Paste
 
 ### Enable pbcopy, pbpaste & co under tmux
-set -g default-command "reattach-to-user-namespace -l ${SHELL}"
 setw -g mode-keys vi
-
-
-### Copy to global clipboard
-bind-key -Tcopy-mode-vi Y send -X copy-pipe "pbcopy"
-bind-key P run "pbpaste | tmux load-buffer - && tmux paste-buffer"
-
-
-
 
 
 # Tmux global Colors / Theming
@@ -62,7 +53,7 @@ set -g status-position top
 set -g status-interval 5 # set update frequency (default 15 seconds)
 set -g status-justify centre
 set -g visual-activity on
-set -g status-right '#{tasks_status} | #{battery_icon} #{battery_percentage}#{?battery_remain, #{battery_remain},} | Online: #{online_status} | %H:%M'
+set -g status-right '%H:%M'
 
 set -g status-left-length 100
 set -g status-right-length 100
@@ -73,37 +64,11 @@ set-option -g status-fg white
 
 # Plugins
 
-## Task manager
-set -g @tasks_manager 'taskwarrior'
-set -g @tasks_format_begin "#[]"
-set -g @tasks_format_end "#[fg=default]"
-set -g @tasks_icon_urgent "#[fg=red] "
-set -g @tasks_icon_outstanding "#[fg=white]+ "
-
-## Battery plugin
-set -g @batt_remain_short true
-set -g @batt_charged_icon "#[fg=green]#[fg=default]"
-set -g @batt_charging_icon "#[fg=brightorange]#[fg=default]"
-set -g @batt_discharging_icon "#[fg=yellow]#[fg=default]"
-set -g @batt_attached_icon "#[fg=green] #[fg=default]"
-set -g @batt_full_charge_icon "#[fg=green] #[fg=default]"
-set -g @batt_high_charge_icon "#[fg=yellow] #[fg=default]"
-set -g @batt_medium_charge_icon "#[fg=orange] #[fg=default]"
-set -g @batt_low_charge_icon "#[fg=red] #[fg=default]"
-
-## Online status plugin
-set -g @online_icon "#[fg=green]#[fg=default]"
-set -g @offline_icon "#[fg=red]#[fg=default]"
-set -g @route_to_ping "he8us.be"
-
 
 ## Load Plugins
 set -g @plugin tmux-plugins/tpm
-set -g @plugin chriszarate/tmux-tasks
-set -g @plugin tmux-plugins/tmux-battery
 set -g @plugin tmux-plugins/tmux-resurrect
-set -g @plugin tmux-plugins/tmux-online-status
 set -g @plugin soyuka/tmux-current-pane-hostname
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '$TMUX_DIR/plugins/tpm/tpm'
+run "$TMUX_DIR/plugins/tpm/tpm"
