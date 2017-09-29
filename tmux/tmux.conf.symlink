@@ -53,7 +53,7 @@ set -g status-position top
 set -g status-interval 5 # set update frequency (default 15 seconds)
 set -g status-justify centre
 set -g visual-activity on
-set -g status-right '%H:%M'
+set -g status-right '#U@#H | %H:%M'
 
 set -g status-left-length 100
 set -g status-right-length 100
